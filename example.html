@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript" src="vendor/popcorn.min.js"></script>
+<script type="text/javascript" src="avsync.js"></script>
+
+<style type="text/css">
+	.container {
+		margin: 0 auto;
+		width: 1600px;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+<audio id="mraud">
+	<source src="http://www.mixingreal.com/test/VocalsAud.wav" type="audio/wav">
+	Your browser does not support the audio element.
+</audio>
+
+<video controls width="1600" height="900" name="media" id="mrvid">
+	<source src="http://www.mixingreal.com/test/VocalsVid.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+</video>
+</div>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		AVSync('mrvid', 'mraud');
+	}, false );
+</script>
+
+</body>
+</html>
